@@ -1,0 +1,102 @@
+body{
+    height: 100%;
+    width:  100%;
+    margin: 0;
+     /*para o height e width 
+    ou qualquer relação de 
+    elementos em (%)
+    funcionar, é necessário uma 
+    relação de el pai e filho.
+    
+    neste caso eu utilizei o position
+    */
+    position: relative;
+    overflow: hidden;
+}
+.l-dev{
+    /*para o height e width 
+    ou qualquer relação de 
+    elementos em (%)
+    funcionar, é necessário uma 
+    relação de el pai e filho.
+    
+    neste caso eu utilizei o position
+    */
+    position: absolute;
+
+    height: 100%;
+    width:  100%;
+    margin: 0;
+}
+.l-dev header{
+    grid-area: header;
+    border: 1px solid red;
+}
+.l-dev header:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.09);
+}
+.l-dev aside{
+    grid-area: aside;
+    border: 1px solid red;
+}
+.l-dev aside:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.09);
+}
+.l-dev main{
+    grid-area: main;
+    border: 1px solid red;
+}
+.l-dev main:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.09);
+}
+.l-dev footer{
+    grid-area: footer;
+    border: 1px solid red;
+}
+.l-dev footer:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.09);
+}
+.l-dev header,.l-dev aside,.l-dev main,.l-dev footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.l-dev{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows:  20% 60% 20%;
+    grid-template-areas: 
+     'aside  header'
+     'aside    main'
+     'footer footer'
+    ;
+}
+
+@media screen and  (max-width:700px){
+
+    .l-dev{
+        display: flex;
+        flex-direction: column;
+    }
+    .l-dev header{
+        height:20vh;
+        width: 100vw;
+    }
+    .l-dev aside{
+        display: none;
+    }
+    .l-dev main{
+        height:60vh;
+        width: 100vw;
+    }
+    .l-dev footer{
+        height:20vh;
+        width: 100vw;
+    }
+
+}

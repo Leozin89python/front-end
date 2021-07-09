@@ -1,0 +1,24 @@
+me deparei com um problema,
+o de layout em relação a elementos
+pai e filho.
+
+solução:
+     para o height e width 
+    ou qualquer relação de 
+    elementos em (%)
+    funciona-se, fez-se necessário uma 
+    relação de el pai e filho.
+    
+    neste caso eu utilizei o position.
+
+    também Outra forma mais simples, 
+    foi o uso desta técnica para alcançar a altura 100%,
+    a utilização da unidade relativa (VH), pois dessa forma 
+    pude fazer a altura se ajustar a altura do dispositivo,
+    com height 100%, para largura utilizei o (VW), para 
+    width 100%., munido do apoio de responsividade com
+    o @media screen().
+
+    link de apoio:
+    https://medium.com/@tassiogoncalvesg/entenda-de-uma-vez-por-todas-como-utilizar-o-height-100-no-css-6d72914a6748
+    
