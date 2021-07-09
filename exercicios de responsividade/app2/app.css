@@ -1,0 +1,119 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.responsive .menu{
+    background-color: red;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: row;
+}
+header{
+    grid-area: header;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #000000;
+    color: whitesmoke;
+}
+header h3{
+    font-size: xx-large;
+    color: brown;
+    margin: 0  0.2em;
+}
+header  strong{
+    margin-right: 3em;
+    cursor: pointer;
+}
+.responsive #menu-burguer{
+    display: none;
+}
+.el1{
+    grid-area: el1;
+    border: solid 1px #000000;
+}
+.el2{
+    grid-area: el2;
+    border: solid 1px black;
+}
+main{
+    border: solid 1px black;
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns:30% 70%;
+    grid-template-rows:30% 70%;
+    grid-template-areas: 
+        'el1 el2'
+        'el1 el2'
+    ;
+}
+footer{
+    grid-area:footer;
+    border: solid 1px black;
+}
+.responsive{
+    height:100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas: 
+        'header  header'
+        'main      main'
+        'footer  footer'
+    ;
+}
+
+@media screen and (max-width: 400px) {
+    
+    header{
+        grid-area: header;
+        position: relative;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2em;
+    
+        background-color: #000000;
+        color: whitesmoke;
+    }
+    .responsive .menu{
+        display: none;
+    }
+    .responsive #menu-burguer{
+        display: flex;
+        flex-direction: column;
+        
+        font-size: xx-small;
+
+        cursor: pointer;
+    }
+    #menu-burguer ul{
+        background-color: whitesmoke;
+        border: solid 1px whitesmoke;
+        width: 20px;
+    }
+    header h3{
+        margin-top: 1.5em;
+        margin-left: -0.8em;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .el1,.el2{
+        height: 50vh;
+        width: 100vw;
+    }
+
+}
